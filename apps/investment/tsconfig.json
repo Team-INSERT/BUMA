@@ -1,0 +1,11 @@
+{
+  "extends": "@buma/tsconfig/nextjs.json",
+  "include": [
+    ".",
+    "./.eslintrc.cjs",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
