@@ -10,26 +10,25 @@ import * as styles from "./style.css";
 
 const History = ({ title }: { title: string }) => {
   const { formatDate } = useDate();
-  const { data: historyList } = useSuspenseQuery(historyQuery.list(title));
-  const decodeTitle = decodeURI(title);
+  const { data: history } = useSuspenseQuery(historyQuery.list(title));
 
   return (
     <Suspense>
-      <Container title={decodeTitle} docsType={decodeTitle}>
-        {historyList.versionDocsResponseDto.map((history) => (
+      <Container title={history.title} docsType={history.title}>
+        {history.versionDocsResponseDto.map((docsHistory) => (
           <Link
-            href={`/history/${decodeTitle}/detail/${history.index}`}
+            href={`/history/${history.title}/detail/${docsHistory.index}`}
             className={styles.historyBox}
-            key={String(history.thisVersionCreatedAt)}
+            key={String(docsHistory.thisVersionCreatedAt)}
           >
             <hgroup className={styles.hgroup}>
-              <h1 className={styles.historyId}>#{history.index}</h1>
+              <h1 className={styles.historyId}>#{docsHistory.index}</h1>
               <time className={styles.createdAt}>
                 편집일 ·&nbsp;
-                {formatDate(history.thisVersionCreatedAt)}
+                {formatDate(docsHistory.thisVersionCreatedAt)}
               </time>
             </hgroup>
-            <span className={styles.author}>작성자 ·&nbsp;{history.nickName}</span>
+            <span className={styles.author}>작성자 ·&nbsp;{docsHistory.nickName}</span>
           </Link>
         ))}
       </Container>
