@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import useModal from "@/hooks/useModal";
-import { RoundLogo } from "@/assets";
+import { RoundLogo } from "@buma/icon";
 import * as styles from "../style.css";
 
 interface Props {

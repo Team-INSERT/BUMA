@@ -5,7 +5,7 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { DocsListItemType } from "@/types";
 import Link from "next/link";
-import { ArrowIcon } from "@/assets";
+import { ArrowIcon } from "@buma/icon";
 import { useDate } from "@/hooks";
 import { theme } from "@/styles";
 import * as styles from "./style.css";

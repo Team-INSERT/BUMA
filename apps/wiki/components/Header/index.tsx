@@ -11,7 +11,7 @@ import {
   SearchIcon,
   MyPageIcon,
   CoinIcon,
-} from "@/assets";
+} from "@buma/icon";
 import { useRouter } from "next/navigation";
 import { useUser, useModal } from "@/hooks";
 import * as styles from "./style.css";

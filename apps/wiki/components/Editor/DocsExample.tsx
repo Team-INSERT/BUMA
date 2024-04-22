@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { ArrowIcon } from "@/assets";
+import { ArrowIcon } from "@buma/icon";
 import { theme } from "@/styles";
 import { documentCompiler } from "@/utils";
 import Toastify from "../Toastify";

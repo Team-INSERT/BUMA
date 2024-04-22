@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowIcon } from "@/assets";
+import { ArrowIcon } from "@buma/icon";
 import { theme } from "@/styles";
 import * as styles from "./style.css";
 
