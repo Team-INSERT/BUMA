@@ -24,7 +24,7 @@ const Popular = () => {
     >
       <header className={styles.titleBox}>인기</header>
       <ul className={styles.docsList}>
-        {popularList.slice(0, 10).map((popular, index) => (
+        {popularList.map((popular, index) => (
           <Link
             href={`/docs/${popular.title}`}
             className={styles.docsListItem[containerStatus]}
