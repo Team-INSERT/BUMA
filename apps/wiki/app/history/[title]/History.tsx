@@ -14,7 +14,7 @@ const History = ({ title }: { title: string }) => {
 
   return (
     <Suspense>
-      <Container title={history.title} docsType={history.title}>
+      <Container title={history.title} docsType={history.docsType}>
         {history.versionDocsResponseDto.map((docsHistory) => (
           <Link
             href={`/history/${history.title}/detail/${docsHistory.index}`}
