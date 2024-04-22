@@ -1,0 +1,10 @@
+{
+  "name": "@buma/typescript-config",
+  "version": "0.0.0-development",
+  "private": true,
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-library.json"
+  ]
+}

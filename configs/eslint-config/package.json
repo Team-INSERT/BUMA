@@ -1,0 +1,24 @@
+{
+  "name": "@buma/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "react-js.js",
+    "react-ts.js",
+    "react-ts-no-import.js"
+  ],
+  "scripts": {
+    "ci:eslint": "eslint \"**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts}\""
+  },
+  "dependencies": {
+    "@buma/eslint-config-js": "workspace:*",
+    "@buma/eslint-config-ts": "workspace:*",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3"
+  }
+}
