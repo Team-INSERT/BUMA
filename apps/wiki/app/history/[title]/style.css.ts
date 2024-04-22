@@ -1,4 +1,4 @@
-import { flex, font, theme } from "@/styles";
+import { flex, font, theme } from "@buma/style";
 import { style } from "@vanilla-extract/css";
 
 export const historyBox = style({

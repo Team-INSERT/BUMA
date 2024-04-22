@@ -1,4 +1,4 @@
-import { flex, font, theme, screen } from "@/styles";
+import { flex, font, theme, screen } from "@buma/style";
 import { StyleVariantsType } from "@/types";
 import { style, styleVariants } from "@vanilla-extract/css";
 

@@ -1,5 +1,5 @@
-import { theme } from "@/styles";
-import * as styles from "@/styles/document.css";
+import { theme } from "@buma/style";
+import * as styles from "./document.css";
 
 const deleteNotAllowedTag = (contents: string) => {
   return contents

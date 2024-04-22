@@ -1,5 +1,5 @@
 import { keyframes, style } from "@vanilla-extract/css";
-import { theme, font, flex, screen } from ".";
+import { theme, font, flex, screen } from "@buma/style";
 
 export const details = style({
   width: "100%",

@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { ERROR } from "@/constants";
 import { refresh } from "@/services/auth/auth.api";
 
@@ -10,14 +10,15 @@ export const http = axios.create({
 http.interceptors.response.use(
   (response) => response,
   async (error) => {
-    const request = error.config;
-    const { code } = error.response.data;
-    const isAccessTokenExpiredError = code === ERROR.TOKEN_403_2;
+    if (error instanceof AxiosError) {
+      const request = error.config;
+      const { code } = error.response?.data || { code: null };
+      const isAccessTokenExpiredError = code === ERROR.TOKEN_403_2;
 
-    if (isAccessTokenExpiredError && !request.sent) {
-      request.sent = true;
-      request.headers.Authorization = await refresh();
-      return http(request);
+      if (isAccessTokenExpiredError && request) {
+        request.headers.Authorization = await refresh();
+        return http(request);
+      }
     }
     return Promise.reject(error);
   },

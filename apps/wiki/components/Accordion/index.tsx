@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import * as styles from "@/styles/document.css";
+import * as styles from "@/utils/document.css";
 import { content } from "./style.css";
 
 interface Props extends PropsWithChildren {
