@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { MoonLoader } from "react-spinners";
-import { theme } from "@/styles";
+import { theme } from "@buma/style";
 import { useLoginMutation } from "@/services/auth/auth.mutation";
 import * as styles from "./style.css";
 

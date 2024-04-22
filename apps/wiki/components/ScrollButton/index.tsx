@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowIcon } from "@buma/icon";
-import { theme } from "@/styles";
+import { theme } from "@buma/style";
 import * as styles from "./style.css";
 
 const ScrollButton = () => {

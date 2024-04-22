@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@buma/ui": "workspace:*",
+    "@buma/style": "workspace:*",
     "@buma/icon": "workspace:*",
     "@next/third-parties": "^14.1.4",
     "@tanstack/react-query": "^5.24.6",

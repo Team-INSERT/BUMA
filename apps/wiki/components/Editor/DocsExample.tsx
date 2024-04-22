@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { ArrowIcon } from "@buma/icon";
-import { theme } from "@/styles";
+import { theme } from "@buma/style";
 import { documentCompiler } from "@/utils";
 import Toastify from "../Toastify";
 import * as styles from "./DocsExample.css";

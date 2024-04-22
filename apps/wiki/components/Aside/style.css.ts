@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { flex, font, theme, screen } from "@/styles";
+import { flex, font, theme, screen } from "@buma/style";
 
 export const container = style({
   width: "300px",

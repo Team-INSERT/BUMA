@@ -6,7 +6,7 @@ const withVanillaExtract = createVanillaExtractPlugin({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withVanillaExtract({
-  transpilePackages: ["@buma/icon"],
+  transpilePackages: ["@buma/icon", "@buma/ui", "@buma/style"],
   swcMinify: true,
   images: {
     domains: [

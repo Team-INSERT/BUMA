@@ -7,7 +7,7 @@ import { DocsListItemType } from "@/types";
 import Link from "next/link";
 import { ArrowIcon } from "@buma/icon";
 import { useDate } from "@/hooks";
-import { theme } from "@/styles";
+import { theme } from "@buma/style";
 import * as styles from "./style.css";
 
 const Aside = () => {
