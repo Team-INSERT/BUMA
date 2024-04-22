@@ -10,3 +10,4 @@ export type { default as ModalState } from "./modal.interface";
 export type { default as StyleVariantsType } from "./styleVariants.type";
 export type { default as TradeType } from "./trade.interface";
 export type { default as UserType } from "./user.interface";
+export type { default as HistoryListType } from "./historyList.interface";
