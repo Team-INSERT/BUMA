@@ -7,7 +7,7 @@ export const getMyInformation = async () => {
 };
 
 export const getUserById = async (id: number) => {
-  const { data } = await http.get(`/user/id/${id}`);
+  const { data } = await http.get(`/user/${id}`);
   return data;
 };
 
