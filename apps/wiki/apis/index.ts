@@ -1,7 +1,6 @@
 import axios from "axios";
-import { ERROR, TOKEN } from "@/constants";
-import { Storage } from "@/storage";
-import { refreshToken } from "./header";
+import { ERROR } from "@/constants";
+import { refresh } from "@/services/auth/auth.api";
 
 export const http = axios.create({
   baseURL: process.env.NEXT_PUBLIC_SERVER_URL,
@@ -23,9 +22,3 @@ http.interceptors.response.use(
     return Promise.reject(error);
   },
 );
-
-const refresh = async () => {
-  const { data } = await http.put("/auth/refresh/access", null, refreshToken());
-  Storage.setItem(TOKEN.ACCESS, data.accessToken);
-  return data.accessToken;
-};
