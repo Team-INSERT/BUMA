@@ -1,10 +1,10 @@
 import { queryOptions } from "@tanstack/react-query";
-import { HistoryType } from "@/types";
+import { HistoryListType } from "@/types";
 import { getHistoryDetail, getHistoryList } from "./history.api";
 
 export const historyQuery = {
   list: <Title extends string>(title: Title) =>
-    queryOptions<{ versionDocsResponseDto: Array<HistoryType> }>({
+    queryOptions<HistoryListType>({
       queryKey: ["query.historyList", title],
       queryFn: () => getHistoryList(title),
     }),
