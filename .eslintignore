@@ -1,5 +1,1 @@
-jest.config.js
-jest.setup.js
-commitlint.config.js
-.eslintrc.js
 next.config.mjs

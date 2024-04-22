@@ -12,7 +12,7 @@ import {
 import { docsQuery } from "@/services/docs/docs.query";
 import { likeQuery } from "@/services/like/like.query";
 import Container from "@/components/Container";
-import { LikeIcon } from "@/assets";
+import { LikeIcon } from "@buma/icon";
 import { useUser } from "@/hooks";
 import Toastify from "@/components/Toastify";
 import { toast } from "react-toastify";

@@ -6,7 +6,7 @@ import { coinQuery } from "@/services/coin/coin.query";
 import Image from "next/image";
 import Link from "next/link";
 import { priceComma, calculateCoinTier } from "@/utils";
-import { WalletIcon } from "@/assets";
+import { WalletIcon } from "@buma/icon";
 import * as styles from "./style.css";
 
 const CoinRanking = () => {

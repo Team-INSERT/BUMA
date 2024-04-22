@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { docsQuery } from "@/services/docs/docs.query";
 import Link from "next/link";
-import { LikeIcon } from "@/assets";
+import { LikeIcon } from "@buma/icon";
 import * as styles from "./style.css";
 
 const Popular = () => {

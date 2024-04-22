@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GithubIcon } from "@/assets";
+import { GithubIcon } from "@buma/icon";
 import * as styles from "./style.css";
 
 const Footer = () => {
