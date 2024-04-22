@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { flex, theme } from "@/styles";
+import { flex, theme } from "@buma/style";
 
 export const container = style({
   position: "fixed",

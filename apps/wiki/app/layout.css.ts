@@ -1,4 +1,4 @@
-import { theme, flex, screen } from "@/styles";
+import { theme, flex, screen } from "@buma/style";
 import { style } from "@vanilla-extract/css";
 
 export const container = style({

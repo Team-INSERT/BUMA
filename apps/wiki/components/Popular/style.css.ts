@@ -1,5 +1,5 @@
 import { style, styleVariants } from "@vanilla-extract/css";
-import { flex, font, theme, screen } from "@/styles";
+import { flex, font, theme, screen } from "@buma/style";
 import { StyleVariantsType } from "@/types";
 import { popularAnimation } from "./keyframes.css";
 

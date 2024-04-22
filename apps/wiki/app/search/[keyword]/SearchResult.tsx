@@ -8,7 +8,7 @@ import Container from "@/components/Container";
 import { useQuery } from "@tanstack/react-query";
 import { docsQuery } from "@/services/docs/docs.query";
 import { useRouter } from "next/navigation";
-import { theme } from "@/styles";
+import { theme } from "@buma/style";
 import { useDate } from "@/hooks";
 import { MoonLoader } from "react-spinners";
 import * as styles from "./style.css";
