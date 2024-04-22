@@ -27,7 +27,7 @@ export const getLastModifiedDocsList = async (page: number) => {
 };
 
 export const requestCreateDocs = async (docs: CreateDocsType) => {
-  const { data } = await http.post("/docs/create", docs, authorization());
+  const { data } = await http.post("/docs", docs, authorization());
   return data;
 };
 
@@ -43,7 +43,7 @@ export const requestUpdateDocs = async ({
 };
 
 export const requestDeleteDocs = async (id: number) => {
-  const { data } = await http.delete(`/docs/delete/${id}`, authorization());
+  const { data } = await http.delete(`/docs/${id}`, authorization());
   return data;
 };
 

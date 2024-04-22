@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build": "dotenv -- turbo run build",
     "test": "turbo run test",
     "dev": "dotenv -- turbo dev",
     "lint": "turbo run lint",
