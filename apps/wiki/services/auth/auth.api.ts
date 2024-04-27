@@ -3,8 +3,8 @@ import { refreshToken } from "@/apis/header";
 import { TOKEN } from "@/constants";
 import { Storage } from "@/storage";
 
-export const refresh = async () => {
-  const { data } = await http.put("/auth/refresh/access", null, refreshToken());
+export const refresh = async (authCode: string) => {
+  const { data } = await http.put("/auth/refresh/access", { accessToken: authCode });
   Storage.setItem(TOKEN.ACCESS, data.accessToken);
   return data.accessToken;
 };
