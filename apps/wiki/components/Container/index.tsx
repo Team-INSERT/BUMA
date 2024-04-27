@@ -16,11 +16,11 @@ interface Props extends PropsWithChildren {
   title: string;
   docsType: string;
   lastModifiedAt?: Date;
-  docsDetail?: boolean;
+  isDocsDetail?: boolean;
   id?: number;
 }
 
-const Container = ({ docsType, title, lastModifiedAt, docsDetail, id, children }: Props) => {
+const Container = ({ docsType, title, lastModifiedAt, isDocsDetail, id, children }: Props) => {
   const { mutate } = useDeleteDocsMutation();
   const { formatDate } = useDate();
   const { isAdmin, user, isLoggedIn } = useUser();
@@ -59,11 +59,11 @@ const Container = ({ docsType, title, lastModifiedAt, docsDetail, id, children }
       <hgroup className={styles.hgroup}>
         <div className={styles.titleBox}>
           <h1 className={styles.title}>부마위키:{title}</h1>
-          {docsDetail && lastModifiedAt && (
+          {isDocsDetail && lastModifiedAt && (
             <span className={styles.lastModifiedAt}>최근 편집 · {formatDate(lastModifiedAt)}</span>
           )}
         </div>
-        {docsDetail && (
+        {isDocsDetail && (
           <div className={styles.utilityBox}>
             <button onClick={handleDocsEditClick} className={styles.editButton}>
               문서 편집
