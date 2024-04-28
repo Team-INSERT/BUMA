@@ -3,12 +3,7 @@ import { docsQuery } from "@/services/docs/docs.query";
 import getQueryClient from "@/app/getQueryClient";
 import Resolver from "./resolver";
 
-interface Props {
-  title: string;
-  contents: string;
-}
-
-const ResolverContainer = ({ title, contents }: Props) => {
+const ResolverContainer = ({ title, contents }: { title: string; contents: string }) => {
   const queryClient = getQueryClient();
   queryClient.prefetchQuery(docsQuery.conflicted({ title, contents }));
 
