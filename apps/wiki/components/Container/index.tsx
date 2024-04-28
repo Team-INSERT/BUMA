@@ -59,7 +59,7 @@ const Container = ({ docsType, title, lastModifiedAt, isDocsDetail, id, children
       <hgroup className={styles.hgroup}>
         <div className={styles.titleBox}>
           <h1 className={styles.title}>부마위키:{title}</h1>
-          {isDocsDetail && lastModifiedAt && (
+          {isDocsDetail && (
             <span className={styles.lastModifiedAt}>최근 편집 · {formatDate(lastModifiedAt)}</span>
           )}
         </div>
