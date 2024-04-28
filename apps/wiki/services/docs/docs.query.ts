@@ -33,9 +33,9 @@ export const docsQuery = {
       queryKey: ["query.lastModifiedAt", page],
       queryFn: () => getLastModifiedDocsList(page),
     }),
-  conflicted: <Title extends string>(title: Title, contents: string) =>
+  conflicted: <Params extends { title: string; contents: string }>({ title, contents }: Params) =>
     queryOptions({
       queryKey: ["query.conflicted", title],
-      queryFn: () => getConflictByTitle(title, contents),
+      queryFn: () => getConflictByTitle({ title, contents }),
     }),
 };

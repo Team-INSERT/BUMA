@@ -30,7 +30,7 @@ interface PropsType {
 
 const Resolver = ({ title, contents }: PropsType) => {
   const { mutateAsync: merge } = useMergeDocsMutation();
-  const { data } = useSuspenseQuery(docsQuery.conflicted(title, contents));
+  const { data } = useSuspenseQuery(docsQuery.conflicted({ title, contents }));
   const [arr1, setArr1] = useState(spliting(data.diff1));
   const [arr2, setArr2] = useState(spliting(data.diff2));
   const [std, setStd] = useState(spliting(data.originalDocsContent));

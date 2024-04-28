@@ -10,7 +10,7 @@ interface Props {
 
 const ResolverContainer = ({ title, contents }: Props) => {
   const queryClient = getQueryClient();
-  queryClient.prefetchQuery(docsQuery.conflicted(title, contents));
+  queryClient.prefetchQuery(docsQuery.conflicted({ title, contents }));
 
   return <Resolver title={title} contents={contents} />;
 };

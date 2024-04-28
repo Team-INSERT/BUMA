@@ -26,10 +26,14 @@ export const getLastModifiedDocsList = async (page: number) => {
   return data;
 };
 
-export const getConflictByTitle = async (title: string, contents: string) => {
-  const { data } = await http.post(`/docs/merge/${title}`, {
-    contents,
-  });
+export const getConflictByTitle = async ({
+  title,
+  contents,
+}: {
+  title: string;
+  contents: string;
+}) => {
+  const { data } = await http.post(`/docs/merge/${title}`, { contents });
 
   return data;
 };
@@ -43,14 +47,7 @@ export const requestMergeDocs = async ({
   contents: string;
   version: number;
 }) => {
-  const { data } = await http.put(
-    `/docs/merge/${title}`,
-    {
-      contents,
-      version,
-    },
-    authorization(),
-  );
+  const { data } = await http.put(`/docs/merge/${title}`, { contents, version }, authorization());
 
   return data;
 };
