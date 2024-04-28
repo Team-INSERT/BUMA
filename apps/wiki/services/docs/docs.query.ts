@@ -1,6 +1,7 @@
 import { queryOptions } from "@tanstack/react-query";
 import { DocsListItemType, DocsItemType, DocsListType } from "@/types";
 import {
+  getConflictByTitle,
   getDocsByKeyword,
   getDocsByTitle,
   getDocsListByClassify,
@@ -31,5 +32,10 @@ export const docsQuery = {
     queryOptions({
       queryKey: ["query.lastModifiedAt", page],
       queryFn: () => getLastModifiedDocsList(page),
+    }),
+  conflicted: <Params extends { title: string; contents: string }>({ title, contents }: Params) =>
+    queryOptions({
+      queryKey: ["query.conflicted", title],
+      queryFn: () => getConflictByTitle({ title, contents }),
     }),
 };

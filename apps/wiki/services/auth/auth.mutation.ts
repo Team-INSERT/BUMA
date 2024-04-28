@@ -7,8 +7,8 @@ export const useLoginMutation = () => {
   return useMutation({
     mutationFn: requestLogin,
     onSuccess: ({ accessToken, refreshToken }) => {
-      Storage.setItem(TOKEN.ACCESS, accessToken);
-      Storage.setItem(TOKEN.REFRESH, refreshToken);
+      Storage.setItem(TOKEN.ACCESS, `Bearer ${accessToken}`);
+      Storage.setItem(TOKEN.REFRESH, `Bearer ${refreshToken}`);
       window.history.go(-2);
     },
   });
