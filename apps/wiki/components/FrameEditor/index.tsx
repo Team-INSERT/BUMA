@@ -22,6 +22,7 @@ const FrameEditor = ({
       title: string;
       contents: string;
       docsType: string;
+      version: number;
     }>
   >;
   setCursorPosition: Dispatch<SetStateAction<number>>;
